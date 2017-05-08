@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/fragment_helper_message"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fragment_helper_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/fragment_helper_name"
+            style="@style/bigSize"
+            android:text="李四"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/fragment_helper_sex"
+            style="@style/smallSize"
+            android:text="男"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/fragment_helper_age"
+            style="@style/smallSize"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorBlack"
+            android:text="54"/>
+
+        <TextView
+            android:id="@+id/fragment_helper_symptom"
+           style="@style/smallSize"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="-82dp"
+            android:text="咳嗽 头痛"/>
+
+        <TextView
+            android:id="@+id/fragment_helper_phoneNumber"
+           style="@style/bigSize"
+            android:text="电话：123456789"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="100dp"/>
+
+        <TextView
+            android:id="@+id/fragment_helper_address"
+           style="@style/bigSize"
+            android:text="位置：南开区王顶缇附近"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="-110dp"/>
+
+        <TextView
+            android:id="@+id/fragment_helper_phone"
+           style="@style/bigSize"
+            android:text="拨打"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:id="@+id/fragment_helper_map"
+           style="@style/bigSize"
+            android:text="查看地图"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="-28dp"
+            android:layout_marginTop="55dp"/>
+
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/fragment_helper_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            style="@style/radioButton"
+            android:text="咨询"
+            android:gravity="center" />
+        <RadioButton
+            style="@style/radioButton"
+            android:text="诊断"
+            android:gravity="center"/>
+        <RadioButton
+            style="@style/radioButton"
+            android:text="中药"
+            android:gravity="center"/>
+        <RadioButton
+            style="@style/radioButton"
+            android:text="中成药"
+            android:gravity="center"/>
+        <RadioButton
+            style="@style/radioButton"
+            android:text="西药"
+            android:gravity="center"/>
+        <RadioButton
+            style="@style/radioButton"
+            android:text="检查检验"
+            android:gravity="center"/>
+
+    </RadioGroup>
+
+
+
+
+</LinearLayout>
