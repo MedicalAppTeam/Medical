@@ -4,19 +4,19 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.medical.MainActivity">
+    tools:context="com.example.medical.activity.MainActivity">
 
     <fragment
         android:id="@+id/doctor"
-        android:layout_width="300dp"
+        android:layout_width="280dp"
         android:layout_height="match_parent"
-        android:name="com.example.medical.DoctorFragment"
+        android:name="com.example.medical.fragment.DoctorFragment"
        />
 
     <fragment
         android:id="@+id/helper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.medical.HelperFragment"
+        android:name="com.example.medical.fragment.HelperFragment"
         android:layout_marginLeft="10dp"/>
 </LinearLayout>

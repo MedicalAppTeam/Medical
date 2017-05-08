@@ -1,7 +1,9 @@
-package com.example.medical;
+package com.example.medical.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.medical.R;
 
 public class MainActivity extends AppCompatActivity {
 
