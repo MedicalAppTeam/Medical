@@ -87,35 +87,65 @@
     <RadioGroup
         android:id="@+id/fragment_helper_button"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <RadioButton
             style="@style/radioButton"
             android:text="咨询"
-            android:gravity="center" />
+            android:gravity="center"
+            android:checked="true"
+            android:background="@drawable/radiobutton"/>
         <RadioButton
             style="@style/radioButton"
             android:text="诊断"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radiobutton"/>
         <RadioButton
             style="@style/radioButton"
             android:text="中药"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radiobutton"/>
         <RadioButton
             style="@style/radioButton"
             android:text="中成药"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radiobutton"/>
         <RadioButton
             style="@style/radioButton"
             android:text="西药"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radiobutton"/>
         <RadioButton
             style="@style/radioButton"
             android:text="检查检验"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radiobutton"/>
 
     </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/fragment_helper_ask_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/fragment_helper_ask_linearLayout_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="聊天功能"/>
+
+
+    </LinearLayout>
+
+
 
 
 
