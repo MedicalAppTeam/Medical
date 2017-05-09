@@ -32,13 +32,13 @@ public class BaseViewHolder extends RecyclerView.ViewHolder{
         viewSparseArray=new SparseArray<>();
     }
 
-    private static BaseViewHolder onCreatMyViewHolder(Context context, ViewGroup viewGroup,int layoutId){
+    public static BaseViewHolder onCreatMyViewHolder(Context context, ViewGroup viewGroup,int layoutId){
         View view= LayoutInflater.from(context).inflate(layoutId,viewGroup,false);
         BaseViewHolder baseViewHolder=new BaseViewHolder(view,context);
         return baseViewHolder;
     }
 
-    private static BaseViewHolder onCreatMyListViewHolder(View view,ViewGroup viewGroup,int layoutId){
+    public static BaseViewHolder onCreatMyListViewHolder(View view,ViewGroup viewGroup,int layoutId){
         BaseViewHolder baseViewHolder=null;
         if (view==null){
             view=LayoutInflater.from(viewGroup.getContext()).inflate(layoutId,viewGroup,false);

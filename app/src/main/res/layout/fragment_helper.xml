@@ -95,6 +95,7 @@
             style="@style/radioButton"
             android:text="咨询"
             android:gravity="center"
+            android:checked="true"
             android:background="@drawable/radiobutton"/>
         <RadioButton
             style="@style/radioButton"
@@ -128,6 +129,23 @@
             android:background="@drawable/radiobutton"/>
 
     </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/fragment_helper_ask_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/fragment_helper_ask_linearLayout_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="聊天功能"/>
+
+
+    </LinearLayout>
+
+
 
 
 
