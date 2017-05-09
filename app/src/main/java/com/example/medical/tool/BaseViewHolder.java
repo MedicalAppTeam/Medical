@@ -1,12 +1,15 @@
 package com.example.medical.tool;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -59,7 +62,7 @@ public class BaseViewHolder extends RecyclerView.ViewHolder{
     }
 
     public BaseViewHolder setText(int resId,String s){
-        TextView textView= (TextView) itemView.findViewById(resId);
+        TextView textView= (TextView) view.findViewById(resId);
         if (s!=null){
             textView.setText(s);
         }
@@ -67,10 +70,18 @@ public class BaseViewHolder extends RecyclerView.ViewHolder{
     }
 
     public BaseViewHolder setOnLineImage(int resId,String url){
-        ImageView imageView= (ImageView) itemView.findViewById(resId);
+        ImageView imageView= (ImageView) view.findViewById(resId);
         if (url!=null){
             Glide.with(context).load(url).into(imageView);
         }
+        return this;
+    }
+
+    public BaseViewHolder setBackGround(int resId,int color){
+        LinearLayout linearLayout= (LinearLayout) view.findViewById(resId);
+
+        linearLayout.setBackgroundColor(color);
+
         return this;
     }
 }

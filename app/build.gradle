@@ -29,11 +29,7 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     testCompile 'junit:junit:4.12'
-<<<<<<< HEAD
-    compile project(':easeUI_CN')
-=======
     compile 'com.github.bumptech.glide:glide:3.8.0'
     compile 'com.squareup.okhttp3:okhttp:3.7.0'
     compile 'com.google.code.gson:gson:2.8.0'
->>>>>>> 7d9da029188e97a8ef072d9d8b0aceef16e4bc35
 }

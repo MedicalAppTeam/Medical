@@ -7,13 +7,14 @@
     <LinearLayout
         android:id="@+id/fragment_helper_message"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="80dp"
+        android:background="@color/colorGray">
 
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/fragment_helper_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@mipmap/ic_launcher"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"/>
@@ -23,7 +24,7 @@
             style="@style/bigSize"
             android:text="李四"
             android:textColor="@color/colorBlack"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="25dp"
             android:layout_marginLeft="10dp"/>
 
         <TextView
@@ -31,13 +32,13 @@
             style="@style/smallSize"
             android:text="男"
             android:textColor="@color/colorBlack"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="15dp"/>
 
         <TextView
             android:id="@+id/fragment_helper_age"
             style="@style/smallSize"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="20dp"
             android:textColor="@color/colorBlack"
             android:text="54"/>
@@ -45,7 +46,7 @@
         <TextView
             android:id="@+id/fragment_helper_symptom"
            style="@style/smallSize"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="45dp"
             android:layout_marginLeft="-82dp"
             android:text="咳嗽 头痛"/>
 
@@ -54,7 +55,7 @@
            style="@style/bigSize"
             android:text="电话：123456789"
             android:textColor="@color/colorBlack"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="25dp"
             android:layout_marginLeft="100dp"/>
 
         <TextView
@@ -62,24 +63,32 @@
            style="@style/bigSize"
             android:text="位置：南开区王顶缇附近"
             android:textColor="@color/colorBlack"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="45dp"
             android:layout_marginLeft="-110dp"/>
 
         <TextView
             android:id="@+id/fragment_helper_phone"
            style="@style/bigSize"
             android:text="拨打"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="35dp"/>
+            android:textColor="@color/colorBlue"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp"/>
 
         <TextView
             android:id="@+id/fragment_helper_map"
            style="@style/bigSize"
             android:text="查看地图"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorBlue"
             android:layout_marginLeft="-28dp"
-            android:layout_marginTop="55dp"/>
+            android:layout_marginTop="45dp"/>
+
+        <TextView
+            android:id="@+id/fragment_helper_history"
+           style="@style/bigSize"
+            android:text="历史记录"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@color/colorBlue"/>
 
 
     </LinearLayout>
@@ -92,18 +101,20 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/fragment_helper_radioButton_ask"
             style="@style/radioButton"
             android:text="咨询"
             android:gravity="center"
-            android:checked="true"
             android:background="@drawable/radiobutton"/>
         <RadioButton
+            android:id="@+id/fragment_helper_radioButton_chat"
             style="@style/radioButton"
             android:text="诊断"
             android:gravity="center"
             android:layout_marginLeft="10dp"
             android:background="@drawable/radiobutton"/>
         <RadioButton
+            android:id="@+id/fragment_helper_radioButton_chinese"
             style="@style/radioButton"
             android:text="中药"
             android:gravity="center"
@@ -116,6 +127,7 @@
             android:layout_marginLeft="10dp"
             android:background="@drawable/radiobutton"/>
         <RadioButton
+            android:id="@+id/fragment_helper_radioButton_western"
             style="@style/radioButton"
             android:text="西药"
             android:gravity="center"
@@ -131,6 +143,7 @@
     </RadioGroup>
 
     <LinearLayout
+        android:visibility="gone"
         android:id="@+id/fragment_helper_ask_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -144,6 +157,198 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/fragment_helper_chat_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="690dp"
+            android:layout_height="50dp"
+            android:background="@color/colorYellow">
+
+            <TextView
+                style="@style/smallSize"
+                android:text="该患者是初诊"
+                android:paddingLeft="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/fragment_helper_ask_editText"
+            android:layout_width="660dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:hint="请输入诊断，该诊断内容将会在处方中显示出来"
+            android:paddingLeft="10dp"
+            android:paddingBottom="150dp"
+            android:background="@drawable/edittext"/>
+
+        <Button
+            android:id="@+id/fragment_helper_ask_button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="保存诊断"
+            android:background="@drawable/button"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/fragment_helper_chinese_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="690dp"
+            android:layout_height="50dp"
+            android:background="@color/colorYellow">
+
+            <TextView
+                style="@style/smallSize"
+                android:text="天津市瑞城大药房王顶缇店  022-38475896\n南开区王顶缇应随路92号"
+                android:textColor="@color/colorBlack"
+                android:paddingLeft="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_helper_chinese_edittext"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="-110dp"
+            android:text="46578912348"
+            android:paddingLeft="10dp"
+            android:paddingBottom="150dp"
+            android:background="@drawable/edittext"/>
+
+        <Button
+            android:id="@+id/fragment_helper_chinese_button"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="确认处方"
+            android:background="@drawable/button"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_helper_chinese_linearLayout_linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="-25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/bigSize"
+                android:text="医师签名:"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/fragment_helper_chinese_linearLayout_linearLayout_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-13dp"
+                android:src="@mipmap/ic_launcher"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/bigSize"
+            android:textColor="@color/colorBlack"
+            android:text="金额：      700元"
+            android:layout_marginLeft="450dp"
+            android:layout_marginTop="-20dp"/>
+    </LinearLayout>
+
+   <LinearLayout
+       android:visibility="gone"
+       android:id="@+id/fragment_helper_western_medical_linearLayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginTop="10dp"
+       android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_width="690dp"
+           android:layout_height="50dp"
+           android:background="@color/colorYellow">
+
+           <TextView
+               style="@style/smallSize"
+               android:text="天津市瑞城大药房王顶缇店  022-38475896\n南开区王顶缇应随路92号"
+               android:textColor="@color/colorBlack"
+               android:paddingLeft="10dp"
+               android:layout_gravity="center"/>
+
+       </LinearLayout>
+
+       <EditText
+           android:id="@+id/fragment_helper_western_medical_edittext"
+           android:layout_width="660dp"
+           android:layout_height="100dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:hint="这是西药"
+           android:paddingLeft="10dp"
+           android:paddingBottom="150dp"
+           android:background="@drawable/edittext"/>
+
+       <Button
+           android:id="@+id/fragment_helper_western_medical_button"
+           android:layout_width="120dp"
+           android:layout_height="40dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:text="确认处方"
+           android:background="@drawable/button"/>
+
+       <LinearLayout
+           android:id="@+id/fragment_helper_western_medical_linearLayout_linearLayout"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="200dp"
+           android:layout_marginTop="-25dp"
+           android:orientation="horizontal">
+
+           <TextView
+               style="@style/bigSize"
+               android:text="医师签名:"
+               android:textColor="@color/colorBlack"
+               />
+
+           <ImageView
+               android:id="@+id/fragment_helper_western_medical_linearLayout_linearLayout_image"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_marginLeft="15dp"
+               android:layout_marginTop="-13dp"
+               android:src="@mipmap/ic_launcher"/>
+       </LinearLayout>
+
+       <TextView
+          style="@style/bigSize"
+           android:textColor="@color/colorBlack"
+           android:text="金额：      700元"
+           android:layout_marginLeft="450dp"
+           android:layout_marginTop="-20dp"/>
+
+
+
+   </LinearLayout>
 
 
 
